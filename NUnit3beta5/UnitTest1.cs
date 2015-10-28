@@ -12,8 +12,7 @@
             Assert.That(1 + 3, Is.EqualTo(6));
         }
 
-        [Test]
-        [Category("calc")]
+        [Test, Critical]
         public void TestMinus()
         {
             Assert.That(1 - 3, Is.EqualTo(-2));
