@@ -1,9 +1,9 @@
-﻿namespace NUnit3beta5
+﻿namespace NUnit3beta2
 {
     using NUnit.Framework;
 
     [TestFixture]
-    public class UnitTest1
+    public class UnitTest2
     {
         [Test]
         [Category("calc"), Category("smth")]
