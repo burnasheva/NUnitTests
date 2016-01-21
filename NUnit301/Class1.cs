@@ -1,9 +1,9 @@
-﻿namespace NUnit2
+﻿namespace NUnit301
 {
     using NUnit.Framework;
 
     [TestFixture]
-    public class UnitTest1
+    public class Class1
     {
         [Test]
         [Category("calc"), Category("smth")]
@@ -11,7 +11,6 @@
         {
             Assert.That(1 + 3, Is.EqualTo(4));
         }
-
 
         [Test]
         [Category("calc")]
