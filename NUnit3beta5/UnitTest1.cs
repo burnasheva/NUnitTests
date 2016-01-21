@@ -9,7 +9,7 @@
         [Category("calc"), Category("smth")]
         public void TestPlus()
         {
-            Assert.That(1 + 3, Is.EqualTo(6));
+            Assert.That(1 + 3, Is.EqualTo(4));
         }
 
         [Test, Critical]
