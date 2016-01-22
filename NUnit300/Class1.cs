@@ -14,6 +14,7 @@ namespace NUnit300
         [Category("calc"), Category("smth")]
         public void TestPlus()
         {
+            Console.WriteLine("Hello");
             Assert.That(1 + 3, Is.EqualTo(4));
         }
 
