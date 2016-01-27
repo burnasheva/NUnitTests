@@ -2,7 +2,6 @@
 {
     using NUnit.Framework;
 
-    [TestFixture]
     public class Class6565
     {
         [Test]
