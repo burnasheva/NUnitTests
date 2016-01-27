@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace NUnit300
+﻿namespace NUnit300
 {
     using NUnit.Framework;
 
@@ -14,7 +9,7 @@ namespace NUnit300
         [Category("calc"), Category("smth")]
         public void TestPlus()
         {
-            Console.WriteLine("Hello");
+            System.Console.WriteLine("Hello");
             Assert.That(1 + 3, Is.EqualTo(4));
         }
 
