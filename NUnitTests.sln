@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnit301", "NUnit301\NUnit3
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnit300", "NUnit300\NUnit300.csproj", "{9C0D231D-BC70-488A-A4D7-4DB471A70665}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnit2Framework", "NUnit2Framework\NUnit2Framework.csproj", "{C97FFCFF-892C-4345-A2BF-D1FB819D6D4D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,6 +81,14 @@ Global
 		{9C0D231D-BC70-488A-A4D7-4DB471A70665}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9C0D231D-BC70-488A-A4D7-4DB471A70665}.Release|x86.ActiveCfg = Release|x86
 		{9C0D231D-BC70-488A-A4D7-4DB471A70665}.Release|x86.Build.0 = Release|x86
+		{C97FFCFF-892C-4345-A2BF-D1FB819D6D4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C97FFCFF-892C-4345-A2BF-D1FB819D6D4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C97FFCFF-892C-4345-A2BF-D1FB819D6D4D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C97FFCFF-892C-4345-A2BF-D1FB819D6D4D}.Debug|x86.Build.0 = Debug|Any CPU
+		{C97FFCFF-892C-4345-A2BF-D1FB819D6D4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C97FFCFF-892C-4345-A2BF-D1FB819D6D4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C97FFCFF-892C-4345-A2BF-D1FB819D6D4D}.Release|x86.ActiveCfg = Release|Any CPU
+		{C97FFCFF-892C-4345-A2BF-D1FB819D6D4D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
