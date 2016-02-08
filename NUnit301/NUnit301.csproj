@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="ClassToExcludeFromCoverage.cs" />
     <Compile Include="ClassToTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
