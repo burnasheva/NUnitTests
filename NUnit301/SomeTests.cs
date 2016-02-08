@@ -1,4 +1,6 @@
-﻿namespace NUnit301
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace NUnit301
 {
     using NUnit.Framework;
 
@@ -35,6 +37,7 @@
 
         [Test]
         [Category("smth")]
+        [ExcludeFromCodeCoverage]
         public void TestSmth()
         {
         }
