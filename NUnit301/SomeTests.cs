@@ -3,7 +3,7 @@
     using NUnit.Framework;
 
     [TestFixture]
-    public class Class1
+    public class SomeTests
     {
         [Test]
         [Category("calc"), Category("smth")]

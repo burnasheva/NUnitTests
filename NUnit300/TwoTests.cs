@@ -1,16 +1,15 @@
 ﻿namespace NUnit300
 {
     using NUnit.Framework;
-    
+
     [TestFixture]
-    public class Class1
+    public class TwoTests
     {
         [Test]
         [Category("calc"), Category("smth")]
         public void TestPlus()
         {
-            System.Console.WriteLine("Hello");
-            Assert.That(1 + 3, Is.EqualTo(4));
+            Assert.That(1 + 6, Is.EqualTo(4));
         }
 
         [Test]

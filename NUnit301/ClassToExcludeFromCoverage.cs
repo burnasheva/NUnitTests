@@ -1,5 +1,8 @@
-﻿namespace NUnit301
+﻿using System;
+
+namespace NUnit301
 {
+    [Obsolete]
     public class ClassToExcludeFromCoverage
     {
         public double Add(double a, double b)
