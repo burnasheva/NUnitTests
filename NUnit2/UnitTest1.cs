@@ -12,6 +12,7 @@ namespace NUnit2
         public void TestPlus()
         {
             Console.WriteLine("http://user:123456@jetbrains.com");
+            Console.WriteLine("123456");
             Assert.That(1 + 3, Is.EqualTo(4));
         }
 
