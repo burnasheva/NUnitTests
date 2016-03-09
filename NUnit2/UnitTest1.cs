@@ -1,4 +1,6 @@
-﻿namespace NUnit2
+﻿using System;
+
+namespace NUnit2
 {
     using NUnit.Framework;
 
@@ -9,6 +11,7 @@
         [Category("calc"), Category("smth")]
         public void TestPlus()
         {
+            Console.WriteLine("http://user:123456@jetbrains.com");
             Assert.That(1 + 3, Is.EqualTo(4));
         }
 
