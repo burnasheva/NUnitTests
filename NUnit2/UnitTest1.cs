@@ -13,7 +13,7 @@ namespace NUnit2
         {
             Console.WriteLine("http://user:123456@jetbrains.com");
             Console.WriteLine("123456");
-            Assert.That(1 + 3, Is.EqualTo(4));
+            Assert.That(1 + 3, Is.EqualTo(5), "123456 password");
         }
 
 
