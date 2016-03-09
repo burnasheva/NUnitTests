@@ -1,4 +1,6 @@
-﻿namespace NUnit320
+﻿using System;
+
+namespace NUnit320
 {
     using NUnit.Framework;
 
@@ -42,6 +44,7 @@
         [Order(1)]
         public void TestSmth()
         {
+            Console.WriteLine("http://user:123456@jetbrains.com");
         }
     }
 }
