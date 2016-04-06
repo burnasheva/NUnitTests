@@ -21,17 +21,18 @@ namespace NUnit2
         [Category("calc")]
         public void TestMinus()
         {
-            Assert.That(1 - 3, Is.EqualTo(-2));
+            Assert.That(1 - 3, Is.EqualTo(-3), "http://user:123456@jetbrains.com");
         }
 
         [Test]
         [Category("calc")]
         public void TestMultiply()
         {
-            Assert.That(1 * 3, Is.EqualTo(3));
+            Assert.That(1 * 3, Is.EqualTo(2), "123456");
         }
 
         [Test]
+        [Ignore("http://user:123456@jetbrains.com")]
         [Category("calc")]
         public void TestDivizion()
         {
