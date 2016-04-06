@@ -9,31 +9,31 @@ namespace NUnit320
     {
         [Test]
         [Category("calc"), Category("smth")]
-        [Order(5)]
         public void TestPlus()
         {
-            Assert.That(1 + 3, Is.EqualTo(4));
+            Console.WriteLine("http://user:123456@jetbrains.com");
+            Console.WriteLine("123456");
+            Assert.That(1 + 3, Is.EqualTo(5), "123456 password");
         }
+
 
         [Test]
         [Category("calc")]
-        [Order(4)]
         public void TestMinus()
         {
-            Assert.That(1 - 3, Is.EqualTo(-2));
+            Assert.That(1 - 3, Is.EqualTo(-3), "http://user:123456@jetbrains.com");
         }
 
         [Test]
         [Category("calc")]
-        [Order(3)]
         public void TestMultiply()
         {
-            Assert.That(1 * 3, Is.EqualTo(3));
+            Assert.That(1 * 3, Is.EqualTo(2), "123456");
         }
 
         [Test]
+        [Ignore("http://user:123456@jetbrains.com")]
         [Category("calc")]
-        [Order(2)]
         public void TestDivizion()
         {
             Assert.That(3 / 3, Is.EqualTo(1));
@@ -41,10 +41,8 @@ namespace NUnit320
 
         [Test]
         [Category("smth")]
-        [Order(1)]
         public void TestSmth()
         {
-            Console.WriteLine("http://user:123456@jetbrains.com");
         }
     }
 }
