@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnit2Framework", "NUnit2Fr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnit320", "NUnit320\NUnit320.csproj", "{4B39E0E6-05E6-4E85-B35A-145E6D884412}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnit321", "NUnit321\NUnit321.csproj", "{5B55B655-F8ED-4FB2-B671-76DB56C98A59}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,14 @@ Global
 		{4B39E0E6-05E6-4E85-B35A-145E6D884412}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4B39E0E6-05E6-4E85-B35A-145E6D884412}.Release|x86.ActiveCfg = Release|Any CPU
 		{4B39E0E6-05E6-4E85-B35A-145E6D884412}.Release|x86.Build.0 = Release|Any CPU
+		{5B55B655-F8ED-4FB2-B671-76DB56C98A59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B55B655-F8ED-4FB2-B671-76DB56C98A59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B55B655-F8ED-4FB2-B671-76DB56C98A59}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5B55B655-F8ED-4FB2-B671-76DB56C98A59}.Debug|x86.Build.0 = Debug|Any CPU
+		{5B55B655-F8ED-4FB2-B671-76DB56C98A59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B55B655-F8ED-4FB2-B671-76DB56C98A59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B55B655-F8ED-4FB2-B671-76DB56C98A59}.Release|x86.ActiveCfg = Release|Any CPU
+		{5B55B655-F8ED-4FB2-B671-76DB56C98A59}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
