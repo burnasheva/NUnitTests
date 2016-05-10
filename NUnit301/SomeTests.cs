@@ -1,4 +1,5 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace NUnit301
 {
@@ -12,6 +13,14 @@ namespace NUnit301
         public void TestPlus()
         {
             Assert.That(1 + 3, Is.EqualTo(4));
+        }
+
+        [Test]
+        public void showInfo()
+        {
+            Console.WriteLine($"CurrentDirectory={Environment.CurrentDirectory}");
+            Console.WriteLine($"Bitness={IntPtr.Size * 8}");
+            Console.WriteLine($"ConfigurationFile={AppDomain.CurrentDomain.SetupInformation.ConfigurationFile}");
         }
 
         [Test]
