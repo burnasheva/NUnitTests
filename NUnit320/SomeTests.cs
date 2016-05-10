@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace NUnit320
 {
@@ -7,6 +8,13 @@ namespace NUnit320
     [TestFixture]
     public class SomeTests
     {
+        [Test]
+        public void TestCurrentWorkingDirectory()
+        {
+            Console.WriteLine("Current working directory is:");
+            Console.WriteLine(Directory.GetCurrentDirectory());
+        }
+
         [Test]
         [Category("calc"), Category("smth")]
         public void TestPlus()
