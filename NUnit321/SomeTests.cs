@@ -8,6 +8,7 @@ namespace NUnit321
     public class SomeTests
     {
         [Test]
+        [Repeat(5)]
         [Category("calc"), Category("smth")]
         public void TestPlus()
         {
@@ -25,6 +26,7 @@ namespace NUnit321
         }
 
         [Test]
+        [Repeat(7)]
         [Category("calc")]
         public void TestMultiply()
         {
