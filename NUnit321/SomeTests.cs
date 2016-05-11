@@ -28,7 +28,7 @@ namespace NUnit321
         [Category("calc")]
         public void TestMultiply()
         {
-            Assert.That(1 * 3, Is.EqualTo(2), "123456");
+            Assert.That(1 * 3, Is.EqualTo(3), "123456");
         }
 
         [Test]
