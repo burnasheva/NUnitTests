@@ -9,7 +9,7 @@
         [Category("calc"), Category("smth")]
         public void TestPlus()
         {
-            Assert.That(1 + 6, Is.EqualTo(4));
+            Assert.That(1 + 6, Is.EqualTo(7));
         }
 
         [Test]
