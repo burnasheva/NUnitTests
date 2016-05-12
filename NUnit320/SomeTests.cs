@@ -21,7 +21,7 @@ namespace NUnit320
         {
             Console.WriteLine("http://user:123456@jetbrains.com");
             Console.WriteLine("123456");
-            Assert.That(1 + 3, Is.EqualTo(5), "123456 password");
+            Assert.That(1 + 3, Is.EqualTo(4), "123456 password");
         }
 
 
