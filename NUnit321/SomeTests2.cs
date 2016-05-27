@@ -11,7 +11,7 @@ namespace NUnit321
         public void Init()
         {
             Console.WriteLine("OneTimeSetup method!!!!");
-            Assert.Fail("Все пропало, КАПИТАН");
+            throw new Exception("Exceptioinin OneTimeSetUp method");
         }
 
         [Test]
