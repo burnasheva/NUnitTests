@@ -1,0 +1,687 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>nunit.portable.agent</name>
+    </assembly>
+    <members>
+        <member name="T:NUnit.Engine.Compatibility.AttributeHelper">
+            <summary>
+            Provides a platform-independent methods for getting attributes
+            for use by AttributeConstraint and AttributeExistsConstraint.
+            </summary>
+        </member>
+        <member name="M:NUnit.Engine.Compatibility.AttributeHelper.GetCustomAttributes(System.Object,System.Type,System.Boolean)">
+            <summary>
+            Gets the custom attributes from the given object.
+            </summary>
+            <remarks>Portable libraries do not have an ICustomAttributeProvider, so we need to cast to each of
+            it's direct subtypes and try to get attributes off those instead.</remarks>
+            <param name="actual">The actual.</param>
+            <param name="attributeType">Type of the attribute.</param>
+            <param name="inherit">if set to <c>true</c> [inherit].</param>
+            <returns>A list of the given attribute on the given object.</returns>
+        </member>
+        <member name="T:NUnit.Engine.Compatibility.BindingFlags">
+            <summary>
+            Specifies flags that control binding and the way in which the search for members
+            and types is conducted by reflection.
+            </summary>
+        </member>
+        <member name="F:NUnit.Engine.Compatibility.BindingFlags.Default">
+            <summary>
+             Specifies no binding flag.
+             </summary>
+        </member>
+        <member name="F:NUnit.Engine.Compatibility.BindingFlags.DeclaredOnly">
+            <summary>
+             Specifies that only members declared at the level of the supplied type's hierarchy
+             should be considered. Inherited members are not considered.
+             </summary>
+        </member>
+        <member name="F:NUnit.Engine.Compatibility.BindingFlags.Instance">
+            <summary>
+             Specifies that instance members are to be included in the search.
+             </summary>
+        </member>
+        <member name="F:NUnit.Engine.Compatibility.BindingFlags.Static">
+            <summary>
+             Specifies that static members are to be included in the search.
+             </summary>
+        </member>
+        <member name="F:NUnit.Engine.Compatibility.BindingFlags.Public">
+            <summary>
+             Specifies that public members are to be included in the search.
+             </summary>
+        </member>
+        <member name="F:NUnit.Engine.Compatibility.BindingFlags.NonPublic">
+            <summary>
+             Specifies that non-public members are to be included in the search.
+             </summary>
+        </member>
+        <member name="F:NUnit.Engine.Compatibility.BindingFlags.FlattenHierarchy">
+            <summary>
+             Specifies that public and protected static members up the hierarchy should be
+             returned. Private static members in inherited classes are not returned. Static
+             members include fields, methods, events, and properties. Nested types are not
+             returned.
+             </summary>
+        </member>
+        <member name="T:NUnit.Engine.Compatibility.Path">
+            <summary>
+            Some path based methods that we need even in the Portable framework which
+            does not have the System.IO.Path class
+            </summary>
+        </member>
+        <member name="F:NUnit.Engine.Compatibility.Path.WindowsSeparatorChar">
+            <summary>
+            Windows directory separator
+            </summary>
+        </member>
+        <member name="F:NUnit.Engine.Compatibility.Path.AltDirectorySeparatorChar">
+            <summary>
+            Alternate directory separator
+            </summary>
+        </member>
+        <member name="F:NUnit.Engine.Compatibility.Path.VolumeSeparatorChar">
+            <summary>
+            A volume separator character.
+            </summary>
+        </member>
+        <member name="M:NUnit.Engine.Compatibility.Path.GetFileName(System.String)">
+            <summary>
+            Get the file name and extension of the specified path string.
+            </summary>
+            <param name="path">The path string from which to obtain the file name and extension.</param>
+            <returns>The filename as a <see cref="T:System.String"/>. If the last character of <paramref name="path"/> is a directory or volume separator character, this method returns <see cref="F:System.String.Empty"/>. If <paramref name="path"/> is null, this method returns null.</returns>
+        </member>
+        <member name="T:NUnit.Engine.Compatibility.TypeExtensions">
+            <summary>
+            Provides NUnit specific extensions to aid in Reflection
+            across multiple frameworks
+            </summary>
+            <remarks>
+            This version of the class allows direct calls on Type on
+            those platforms that would normally require use of 
+            GetTypeInfo().
+            </remarks>
+        </member>
+        <member name="M:NUnit.Engine.Compatibility.TypeExtensions.GetGenericArguments(System.Type)">
+            <summary>
+            Returns an array of generic arguments for the give type
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NUnit.Engine.Compatibility.TypeExtensions.GetConstructor(System.Type,System.Type[])">
+            <summary>
+            Gets the constructor with the given parameter types
+            </summary>
+            <param name="type"></param>
+            <param name="ptypes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NUnit.Engine.Compatibility.TypeExtensions.GetConstructors(System.Type)">
+            <summary>
+            Gets the constructors for a type
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NUnit.Engine.Compatibility.TypeExtensions.IsAssignableFrom(System.Type,System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="type"></param>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NUnit.Engine.Compatibility.TypeExtensions.IsInstanceOfType(System.Type,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="type"></param>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NUnit.Engine.Compatibility.TypeExtensions.GetInterfaces(System.Type)">
+            <summary>
+            Gets declared or inherited interfaces on this type
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NUnit.Engine.Compatibility.TypeExtensions.GetMember(System.Type,System.String,NUnit.Engine.Compatibility.BindingFlags)">
+            <summary>
+            Gets the member on a given type by name. BindingFlags ARE IGNORED.
+            </summary>
+            <param name="type"></param>
+            <param name="name"></param>
+            <param name="ignored"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NUnit.Engine.Compatibility.TypeExtensions.GetMembers(System.Type,NUnit.Engine.Compatibility.BindingFlags)">
+            <summary>
+            Gets all members on a given type. BindingFlags ARE IGNORED.
+            </summary>
+            <param name="type"></param>
+            <param name="ignored"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NUnit.Engine.Compatibility.TypeExtensions.GetField(System.Type,System.String)">
+            <summary>
+            Gets field of the given name on the type
+            </summary>
+            <param name="type"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NUnit.Engine.Compatibility.TypeExtensions.GetProperty(System.Type,System.String)">
+            <summary>
+            Gets property of the given name on the type
+            </summary>
+            <param name="type"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NUnit.Engine.Compatibility.TypeExtensions.GetProperty(System.Type,System.String,NUnit.Engine.Compatibility.BindingFlags)">
+            <summary>
+            Gets property of the given name on the type
+            </summary>
+            <param name="type"></param>
+            <param name="name"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NUnit.Engine.Compatibility.TypeExtensions.GetMethod(System.Type,System.String)">
+            <summary>
+            Gets the method with the given name and parameter list
+            </summary>
+            <param name="type"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NUnit.Engine.Compatibility.TypeExtensions.GetMethod(System.Type,System.String,NUnit.Engine.Compatibility.BindingFlags)">
+            <summary>
+            Gets the method with the given name and parameter list
+            </summary>
+            <param name="type"></param>
+            <param name="name"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NUnit.Engine.Compatibility.TypeExtensions.GetMethod(System.Type,System.String,System.Type[])">
+            <summary>
+            Gets the method with the given name and parameter list
+            </summary>
+            <param name="type"></param>
+            <param name="name"></param>
+            <param name="ptypes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NUnit.Engine.Compatibility.TypeExtensions.GetMethods(System.Type)">
+            <summary>
+            Gets public methods on the given type
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NUnit.Engine.Compatibility.TypeExtensions.GetMethods(System.Type,NUnit.Engine.Compatibility.BindingFlags)">
+            <summary>
+            Gets methods on a type
+            </summary>
+            <param name="type"></param>
+            <param name="flags"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NUnit.Engine.Compatibility.MemberInfoExtensions">
+            <summary>
+            Extensions to the various MemberInfo derived classes
+            </summary>
+        </member>
+        <member name="M:NUnit.Engine.Compatibility.MemberInfoExtensions.GetGetMethod(System.Reflection.PropertyInfo,System.Boolean)">
+            <summary>
+            Returns the get method for the given property
+            </summary>
+            <param name="pinfo"></param>
+            <param name="nonPublic"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NUnit.Engine.Compatibility.MemberInfoExtensions.GetAttributes``1(System.Reflection.MemberInfo,System.Boolean)">
+            <summary>
+            Returns an array of custom attributes of the specified type applied to this member
+            </summary>
+            <remarks> Portable throws an argument exception if T does not
+            derive from Attribute. NUnit uses interfaces to find attributes, thus
+            this method</remarks>
+        </member>
+        <member name="M:NUnit.Engine.Compatibility.MemberInfoExtensions.GetAttributes``1(System.Reflection.ParameterInfo,System.Boolean)">
+            <summary>
+            Returns an array of custom attributes of the specified type applied to this parameter
+            </summary>
+        </member>
+        <member name="M:NUnit.Engine.Compatibility.MemberInfoExtensions.GetAttributes``1(System.Reflection.Assembly)">
+            <summary>
+            Returns an array of custom attributes of the specified type applied to this assembly
+            </summary>
+        </member>
+        <member name="T:NUnit.Engine.Compatibility.AssemblyExtensions">
+            <summary>
+            Extensions for Assembly that are not available in portable
+            </summary>
+        </member>
+        <member name="M:NUnit.Engine.Compatibility.AssemblyExtensions.GetCustomAttributes(System.Reflection.Assembly,System.Type,System.Boolean)">
+            <summary>
+            DNX does not have a version of GetCustomAttributes on Assembly that takes an inherit
+            parameter since it doesn't make sense on Assemblies. This version just ignores the 
+            inherit parameter.
+            </summary>
+            <param name="asm">The assembly</param>
+            <param name="attributeType">The type of attribute you are looking for</param>
+            <param name="inherit">Ignored</param>
+            <returns></returns>
+        </member>
+        <member name="M:NUnit.Engine.Compatibility.AssemblyExtensions.GetTypes(System.Reflection.Assembly)">
+            <summary>
+            Gets the types in a given assembly
+            </summary>
+            <param name="asm"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NUnit.Engine.Compatibility.AdditionalTypeExtensions">
+            <summary>
+            Type extensions that apply to all target frameworks
+            </summary>
+        </member>
+        <member name="M:NUnit.Engine.Compatibility.AdditionalTypeExtensions.ParametersMatch(System.Reflection.ParameterInfo[],System.Type[])">
+            <summary>
+            Determines if the given <see cref="T:System.Type"/> array is castable/matches the <see cref="T:System.Reflection.ParameterInfo"/> array.
+            </summary>
+            <param name="pinfos"></param>
+            <param name="ptypes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NUnit.Engine.Compatibility.AdditionalTypeExtensions.IsCastableFrom(System.Type,System.Type)">
+            <summary>
+            Determines if one type can be implicitly converted from another
+            </summary>
+            <param name="to"></param>
+            <param name="from"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NUnit.Engine.Compatibility.NUnitNullType">
+            <summary>
+            This class is used as a flag when we get a parameter list for a method/constructor, but
+            we do not know one of the types because null was passed in.
+            </summary>
+        </member>
+        <member name="T:NUnit.Engine.Guard">
+            <summary>
+            Class used to guard against unexpected argument values
+            or operations by throwing an appropriate exception.
+            </summary>
+        </member>
+        <member name="M:NUnit.Engine.Guard.ArgumentNotNull(System.Object,System.String)">
+            <summary>
+            Throws an exception if an argument is null
+            </summary>
+            <param name="value">The value to be tested</param>
+            <param name="name">The name of the argument</param>
+        </member>
+        <member name="M:NUnit.Engine.Guard.ArgumentNotNullOrEmpty(System.String,System.String)">
+            <summary>
+            Throws an exception if a string argument is null or empty
+            </summary>
+            <param name="value">The value to be tested</param>
+            <param name="name">The name of the argument</param>
+        </member>
+        <member name="M:NUnit.Engine.Guard.ArgumentInRange(System.Boolean,System.String,System.String)">
+            <summary>
+            Throws an ArgumentOutOfRangeException if the specified condition is not met.
+            </summary>
+            <param name="condition">The condition that must be met</param>
+            <param name="message">The exception message to be used</param>
+            <param name="paramName">The name of the argument</param>
+        </member>
+        <member name="M:NUnit.Engine.Guard.ArgumentValid(System.Boolean,System.String,System.String)">
+            <summary>
+            Throws an ArgumentException if the specified condition is not met.
+            </summary>
+            <param name="condition">The condition that must be met</param>
+            <param name="message">The exception message to be used</param>
+            <param name="paramName">The name of the argument</param>
+        </member>
+        <member name="M:NUnit.Engine.Guard.OperationValid(System.Boolean,System.String)">
+            <summary>
+            Throws an InvalidOperationException if the specified condition is not met.
+            </summary>
+            <param name="condition">The condition that must be met</param>
+            <param name="message">The exception message to be used</param>
+        </member>
+        <member name="T:NUnit.Engine.ILogger">
+            <summary>
+            Interface for logging within the engine
+            </summary>
+        </member>
+        <member name="M:NUnit.Engine.ILogger.Error(System.String)">
+            <summary>
+            Logs the specified message at the error level.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:NUnit.Engine.ILogger.Error(System.String,System.Object[])">
+            <summary>
+            Logs the specified message at the error level.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="args">The arguments.</param>
+        </member>
+        <member name="M:NUnit.Engine.ILogger.Warning(System.String)">
+            <summary>
+            Logs the specified message at the warning level.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:NUnit.Engine.ILogger.Warning(System.String,System.Object[])">
+            <summary>
+            Logs the specified message at the warning level.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="args">The arguments.</param>
+        </member>
+        <member name="M:NUnit.Engine.ILogger.Info(System.String)">
+            <summary>
+            Logs the specified message at the info level.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:NUnit.Engine.ILogger.Info(System.String,System.Object[])">
+            <summary>
+            Logs the specified message at the info level.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="args">The arguments.</param>
+        </member>
+        <member name="M:NUnit.Engine.ILogger.Debug(System.String)">
+            <summary>
+            Logs the specified message at the debug level.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:NUnit.Engine.ILogger.Debug(System.String,System.Object[])">
+            <summary>
+            Logs the specified message at the debug level.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="args">The arguments.</param>
+        </member>
+        <member name="T:NUnit.Engine.Internal.InternalTrace">
+            <summary>
+            InternalTrace provides facilities for tracing the execution
+            of the NUnit framework. Tests and classes under test may make use 
+            of Console writes, System.Diagnostics.Trace or various loggers and
+            NUnit itself traps and processes each of them. For that reason, a
+            separate internal trace is needed.
+            
+            Note:
+            InternalTrace uses a global lock to allow multiple threads to write
+            trace messages. This can easily make it a bottleneck so it must be 
+            used sparingly. Keep the trace Level as low as possible and only
+            insert InternalTrace writes where they are needed.
+            TODO: add some buffering and a separate writer thread as an option.
+            TODO: figure out a way to turn on trace in specific classes only.
+            </summary>
+        </member>
+        <member name="P:NUnit.Engine.Internal.InternalTrace.Initialized">
+            <summary>
+            Gets a flag indicating whether the InternalTrace is initialized
+            </summary>
+        </member>
+        <member name="M:NUnit.Engine.Internal.InternalTrace.Initialize(System.IO.TextWriter,NUnit.Engine.InternalTraceLevel)">
+            <summary>
+            Initialize the internal trace using a provided TextWriter and level
+            </summary>
+            <param name="writer">A TextWriter</param>
+            <param name="level">The InternalTraceLevel</param>
+        </member>
+        <member name="M:NUnit.Engine.Internal.InternalTrace.GetLogger(System.String)">
+            <summary>
+            Get a named Logger
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NUnit.Engine.Internal.InternalTrace.GetLogger(System.Type)">
+            <summary>
+            Get a logger named for a particular Type.
+            </summary>
+        </member>
+        <member name="T:NUnit.Engine.Internal.InternalTraceWriter">
+            <summary>
+            A trace listener that writes to a separate file per domain
+            and process using it.
+            </summary>
+        </member>
+        <member name="M:NUnit.Engine.Internal.InternalTraceWriter.#ctor(System.IO.TextWriter)">
+            <summary>
+            Construct an InternalTraceWriter that writes to a 
+            TextWriter provided by the caller.
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="P:NUnit.Engine.Internal.InternalTraceWriter.Encoding">
+            <summary>
+            Returns the character encoding in which the output is written.
+            </summary>
+            <returns>The character encoding in which the output is written.</returns>
+        </member>
+        <member name="M:NUnit.Engine.Internal.InternalTraceWriter.Write(System.Char)">
+            <summary>
+            Writes a character to the text string or stream.
+            </summary>
+            <param name="value">The character to write to the text stream.</param>
+        </member>
+        <member name="M:NUnit.Engine.Internal.InternalTraceWriter.Write(System.String)">
+            <summary>
+            Writes a string to the text string or stream.
+            </summary>
+            <param name="value">The string to write.</param>
+        </member>
+        <member name="M:NUnit.Engine.Internal.InternalTraceWriter.WriteLine(System.String)">
+            <summary>
+            Writes a string followed by a line terminator to the text string or stream.
+            </summary>
+            <param name="value">The string to write. If <paramref name="value" /> is null, only the line terminator is written.</param>
+        </member>
+        <member name="M:NUnit.Engine.Internal.InternalTraceWriter.Dispose(System.Boolean)">
+            <summary>
+            Releases the unmanaged resources used by the <see cref="T:System.IO.TextWriter" /> and optionally releases the managed resources.
+            </summary>
+            <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+        </member>
+        <member name="M:NUnit.Engine.Internal.InternalTraceWriter.Flush">
+            <summary>
+            Clears all buffers for the current writer and causes any buffered data to be written to the underlying device.
+            </summary>
+        </member>
+        <member name="T:NUnit.Engine.Internal.Logger">
+            <summary>
+            Provides internal logging to the NUnit framework
+            </summary>
+        </member>
+        <member name="M:NUnit.Engine.Internal.Logger.#ctor(System.String,NUnit.Engine.InternalTraceLevel,System.IO.TextWriter)">
+            <summary>
+            Initializes a new instance of the <see cref="T:NUnit.Engine.Internal.Logger"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="level">The log level.</param>
+            <param name="writer">The writer where logs are sent.</param>
+        </member>
+        <member name="M:NUnit.Engine.Internal.Logger.Error(System.String)">
+            <summary>
+            Logs the message at error level.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:NUnit.Engine.Internal.Logger.Error(System.String,System.Object[])">
+            <summary>
+            Logs the message at error level.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="args">The message arguments.</param>
+        </member>
+        <member name="M:NUnit.Engine.Internal.Logger.Warning(System.String)">
+            <summary>
+            Logs the message at warm level.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:NUnit.Engine.Internal.Logger.Warning(System.String,System.Object[])">
+            <summary>
+            Logs the message at warning level.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="args">The message arguments.</param>
+        </member>
+        <member name="M:NUnit.Engine.Internal.Logger.Info(System.String)">
+            <summary>
+            Logs the message at info level.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:NUnit.Engine.Internal.Logger.Info(System.String,System.Object[])">
+            <summary>
+            Logs the message at info level.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="args">The message arguments.</param>
+        </member>
+        <member name="M:NUnit.Engine.Internal.Logger.Debug(System.String)">
+            <summary>
+            Logs the message at debug level.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:NUnit.Engine.Internal.Logger.Debug(System.String,System.Object[])">
+            <summary>
+            Logs the message at debug level.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="args">The message arguments.</param>
+        </member>
+        <member name="T:NUnit.Engine.InternalTraceLevel">
+            <summary>
+            InternalTraceLevel is an enumeration controlling the
+            level of detailed presented in the internal log.
+            </summary>
+        </member>
+        <member name="F:NUnit.Engine.InternalTraceLevel.Default">
+            <summary>
+            Use the default settings as specified by the user.
+            </summary>
+        </member>
+        <member name="F:NUnit.Engine.InternalTraceLevel.Off">
+            <summary>
+            Do not display any trace messages
+            </summary>
+        </member>
+        <member name="F:NUnit.Engine.InternalTraceLevel.Error">
+            <summary>
+            Display Error messages only
+            </summary>
+        </member>
+        <member name="F:NUnit.Engine.InternalTraceLevel.Warning">
+            <summary>
+            Display Warning level and higher messages
+            </summary>
+        </member>
+        <member name="F:NUnit.Engine.InternalTraceLevel.Info">
+            <summary>
+            Display informational and higher messages
+            </summary>
+        </member>
+        <member name="F:NUnit.Engine.InternalTraceLevel.Debug">
+            <summary>
+            Display debug messages and higher - i.e. all messages
+            </summary>
+        </member>
+        <member name="F:NUnit.Engine.InternalTraceLevel.Verbose">
+            <summary>
+            Display debug messages and higher - i.e. all messages
+            </summary>
+        </member>
+        <member name="T:NUnit.Engine.NUnitPortableDriver">
+            <summary>
+            NUnitDriver is used by the test-runner to load and run
+            tests using the NUnit framework assembly.
+            </summary>
+        </member>
+        <member name="P:NUnit.Engine.NUnitPortableDriver.ID">
+            <summary>
+            An id prefix that will be passed to the test framework and used as part of the
+            test ids created.
+            </summary>
+        </member>
+        <member name="M:NUnit.Engine.NUnitPortableDriver.Load(System.Reflection.Assembly,System.Reflection.Assembly,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Loads the tests in an assembly.
+            </summary>
+            <param name="frameworkAssembly">The NUnit Framework that the tests reference</param>
+            <param name="testAssembly">The test assembly</param>
+            <param name="settings">The test settings</param>
+            <returns>An Xml string representing the loaded test</returns>
+        </member>
+        <member name="M:NUnit.Engine.NUnitPortableDriver.CountTestCases(System.String)">
+            <summary>
+            Counts the number of test cases for the loaded test assembly
+            </summary>
+            <param name="filter">The XML test filter</param>
+            <returns>The number of test cases</returns>
+        </member>
+        <member name="M:NUnit.Engine.NUnitPortableDriver.Run(System.Action{System.String},System.String)">
+            <summary>
+            Executes the tests in an assembly.
+            </summary>
+            <param name="callback">A callback that receives XML progress notices</param>
+            <param name="filter">A filter that controls which tests are executed</param>
+            <returns>An Xml string representing the result</returns>
+        </member>
+        <member name="M:NUnit.Engine.NUnitPortableDriver.RunAsync(System.Action{System.String},System.String)">
+            <summary>
+            Executes the tests in an assembly asyncronously.
+            </summary>
+            <param name="callback">A callback that receives XML progress notices</param>
+            <param name="filter">A filter that controls which tests are executed</param>
+        </member>
+        <member name="M:NUnit.Engine.NUnitPortableDriver.StopRun(System.Boolean)">
+            <summary>
+            Cancel the ongoing test run. If no  test is running, the call is ignored.
+            </summary>
+            <param name="force">If true, cancel any ongoing test threads, otherwise wait for them to complete.</param>
+        </member>
+        <member name="M:NUnit.Engine.NUnitPortableDriver.Explore(System.String)">
+            <summary>
+            Returns information about the tests in an assembly.
+            </summary>
+            <param name="filter">A filter indicating which tests to include</param>
+            <returns>An Xml string representing the tests</returns>
+        </member>
+        <member name="T:NUnit.Engine.NUnitPortableDriverException">
+            <summary>
+            NUnitDriverException is thrown when the driver has been
+            called with improper values or when a particular facility
+            is not available.
+            </summary>
+        </member>
+        <member name="M:NUnit.Engine.NUnitPortableDriverException.#ctor(System.String)">
+            <summary>
+            Construct with a message
+            </summary>
+        </member>
+        <member name="M:NUnit.Engine.NUnitPortableDriverException.#ctor(System.String,System.Exception)">
+            <summary>
+            Construct with a message and inner exception
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+    </members>
+</doc>
