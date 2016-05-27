@@ -1,10 +1,18 @@
-﻿namespace NUnit2
+﻿using System;
+
+namespace NUnit2
 {
     using NUnit.Framework;
 
     [TestFixture]
     public class UnitTest2
     {
+        [SetUp]
+        public void DoingSmth()
+        {
+            throw new Exception("Exceptioinin OneTimeSetUp method");
+        }
+
         [Test]
         [Category("calc"), Category("smth")]
         public void TestPlus()
