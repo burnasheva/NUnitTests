@@ -92,4 +92,10 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <Target Name="RunTests">
+    <Exec IgnoreExitCode="True" Command="NUnit32x\NUnut-3.2.x.debug\bin\nunit3-console.exe NUnit32x\bin\Debug\NUnit32x.dll">
+      <Output TaskParameter="ExitCode" ItemName="exitCode" />
+    </Exec>
+    <Error Text="Error while running tests" Condition="@(exitCode) &lt; 0" />
+  </Target>
 </Project>
