@@ -9,7 +9,6 @@ namespace NUnit2
     [TestFixture]
     public class UnitTest1
     {
-        private ServerStatus _serverStatus;
 
         [Test]
         public void TestCalculator()
@@ -21,8 +20,12 @@ namespace NUnit2
         [Test]
         public void TestLoadDll()
         {
+            Server srv;
+            var server = new Server();
+            //server.ConnectionContext.ExecuteNonQuery(String.Empty);
+
             CalcProject.Calculator.plus(2.4, 4.5);
-            _serverStatus = ServerStatus.Offline;
+            
         }
 
         [Test]
