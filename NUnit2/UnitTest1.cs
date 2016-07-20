@@ -1,4 +1,6 @@
 ﻿using System;
+using Microsoft.SqlServer.Management.Smo;
+using Calculator = Calculator.Calculator;
 
 namespace NUnit2
 {
@@ -7,10 +9,20 @@ namespace NUnit2
     [TestFixture]
     public class UnitTest1
     {
+        private ServerStatus _serverStatus;
+
+        [Test]
+        public void TestCalculator()
+        {
+            global::Calculator.Calculator calc = new global::Calculator.Calculator();
+            Assert.AreEqual(9.9, calc.summ(4.5, 4.4));
+        }
+
         [Test]
         public void TestLoadDll()
         {
             CalcProject.Calculator.plus(2.4, 4.5);
+            _serverStatus = ServerStatus.Offline;
         }
 
         [Test]
