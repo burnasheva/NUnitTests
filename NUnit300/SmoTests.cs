@@ -12,15 +12,10 @@ namespace NUnit300
         [Category("calc"), Category("smth")]
         public void TestPlus()
         {
-            try
-            {
+           
                 var server = new Server(String.Empty);
                 server.ConnectionContext.ExecuteNonQuery(String.Empty);
-            }
-            catch (Exception)
-            {
                 Console.WriteLine("Успех - моё второе имя");
-            }
             Assert.True(true);
         }
 
