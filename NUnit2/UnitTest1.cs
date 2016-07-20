@@ -8,6 +8,12 @@ namespace NUnit2
     public class UnitTest1
     {
         [Test]
+        public void TestLoadDll()
+        {
+            CalcProject.Calculator.plus(2.4, 4.5);
+        }
+
+        [Test]
         [Category("calc"), Category("smth")]
         public void TestPlus()
         {
