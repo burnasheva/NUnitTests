@@ -1,4 +1,5 @@
 ﻿using System;
+using CalcProject;
 using Microsoft.SqlServer.Management.Smo;
 
 namespace NUnit300
@@ -8,6 +9,12 @@ namespace NUnit300
     [TestFixture]
     public class SmoTests
     {
+        [Test]
+        public void TestLoadDll()
+        {
+            Calculator.plus(2.4, 4.4);
+        }
+
         [Test]
         [Category("calc"), Category("smth")]
         public void TestPlus()
