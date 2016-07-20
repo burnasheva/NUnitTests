@@ -1,5 +1,5 @@
 ﻿using System;
-using Microsoft.SqlServer.Management.Smo;
+using CalcProject;
 
 namespace NUnit300
 {
@@ -12,10 +12,7 @@ namespace NUnit300
         [Category("calc"), Category("smth")]
         public void TestPlus()
         {  
-            var server = new Server(String.Empty);
-            server.ConnectionContext.ExecuteNonQuery(String.Empty);
-            Console.WriteLine("Успех - моё второе имя");
-            Assert.True(true);
+            Assert.NotNull(Calculator.plus(3, 3));
         }
 
     }
