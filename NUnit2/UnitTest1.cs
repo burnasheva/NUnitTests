@@ -1,6 +1,4 @@
 ﻿using System;
-using Microsoft.SqlServer.Management.Smo;
-using Calculator = Calculator.Calculator;
 
 namespace NUnit2
 {
@@ -10,21 +8,11 @@ namespace NUnit2
     public class UnitTest1
     {
 
-        [Test]
-        public void TestCalculator()
-        {
-            global::Calculator.Calculator calc = new global::Calculator.Calculator();
-            Assert.AreEqual(9.9, calc.summ(4.5, 4.4));
-        }
 
         [Test]
         public void TestLoadDll()
         {
-            Server srv;
-            var server = new Server();
-            //server.ConnectionContext.ExecuteNonQuery(String.Empty);
-
-            CalcProject.Calculator.plus(2.4, 4.5);
+            
             
         }
 
