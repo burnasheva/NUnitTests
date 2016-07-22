@@ -43,10 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SomeTests.cs" />
     <Compile Include="SomeTests2.cs" />
+    <Compile Include="SomeTests3.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
