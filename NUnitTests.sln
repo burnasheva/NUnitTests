@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnit32x", "NUnit32x\NUnit3
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnit32x_35", "NUnit32x_35\NUnit32x_35.csproj", "{41DAD68A-8F50-4F6B-A84A-94C33635323B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnit341", "NUnit341\NUnit341.csproj", "{83393AA2-E406-4AC2-85A7-DDA50253368E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -89,6 +91,14 @@ Global
 		{41DAD68A-8F50-4F6B-A84A-94C33635323B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{41DAD68A-8F50-4F6B-A84A-94C33635323B}.Release|x86.ActiveCfg = Release|Any CPU
 		{41DAD68A-8F50-4F6B-A84A-94C33635323B}.Release|x86.Build.0 = Release|Any CPU
+		{83393AA2-E406-4AC2-85A7-DDA50253368E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83393AA2-E406-4AC2-85A7-DDA50253368E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83393AA2-E406-4AC2-85A7-DDA50253368E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{83393AA2-E406-4AC2-85A7-DDA50253368E}.Debug|x86.Build.0 = Debug|Any CPU
+		{83393AA2-E406-4AC2-85A7-DDA50253368E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83393AA2-E406-4AC2-85A7-DDA50253368E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83393AA2-E406-4AC2-85A7-DDA50253368E}.Release|x86.ActiveCfg = Release|Any CPU
+		{83393AA2-E406-4AC2-85A7-DDA50253368E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
