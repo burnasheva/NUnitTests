@@ -28,3 +28,4 @@ E:\Documents\GitHub\NUnitTests\NUnit32x_35\bin\Debug\nunitlite.pdb
 E:\Documents\GitHub\NUnitTests\NUnit32x_35\obj\Debug\Native.NUnit32x_35.manifest
 E:\Documents\GitHub\NUnitTests\NUnit32x_35\obj\Debug\NUnit32x_35.dll
 E:\Documents\GitHub\NUnitTests\NUnit32x_35\obj\Debug\NUnit32x_35.pdb
+E:\Documents\GitHub\NUnitTests\NUnit32x_35\obj\Debug\NUnit32x_35.csprojResolveAssemblyReference.cache
