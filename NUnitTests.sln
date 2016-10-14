@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnit341", "NUnit341\NUnit3
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnit2bBD", "NUnit2bBD\NUnit2bBD.csproj", "{64834548-30D2-448A-BEF4-54E6576215C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnit350", "NUnit350\NUnit350.csproj", "{F7BCF679-72DF-46A9-A08E-07A010EBFC9A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -109,6 +111,14 @@ Global
 		{64834548-30D2-448A-BEF4-54E6576215C9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{64834548-30D2-448A-BEF4-54E6576215C9}.Release|x86.ActiveCfg = Release|Any CPU
 		{64834548-30D2-448A-BEF4-54E6576215C9}.Release|x86.Build.0 = Release|Any CPU
+		{F7BCF679-72DF-46A9-A08E-07A010EBFC9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7BCF679-72DF-46A9-A08E-07A010EBFC9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7BCF679-72DF-46A9-A08E-07A010EBFC9A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F7BCF679-72DF-46A9-A08E-07A010EBFC9A}.Debug|x86.Build.0 = Debug|Any CPU
+		{F7BCF679-72DF-46A9-A08E-07A010EBFC9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7BCF679-72DF-46A9-A08E-07A010EBFC9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7BCF679-72DF-46A9-A08E-07A010EBFC9A}.Release|x86.ActiveCfg = Release|Any CPU
+		{F7BCF679-72DF-46A9-A08E-07A010EBFC9A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
