@@ -61,12 +61,12 @@
   <Target Name="BeforeBuild">
   </Target>
   -->
-  <!--
+  
   <Target Name="AfterBuild">
     <Exec IgnoreExitCode="True" Command="nunit3-console.exe test.dll">
       <Output TaskParameter="ExitCode" ItemName="exitCode" />
     </Exec>
     <Error Text="Error while running tests" Condition="@(exitCode) &lt; 0" />
   </Target>
--->
+
 </Project>
