@@ -63,7 +63,7 @@
   -->
   
   <Target Name="AfterBuild">
-    <Exec IgnoreExitCode="True" Command="..\\packages\\NUnit.Console.3.0.1\\tools\\nunit3-console.exe NUnit301\\bin\\$(Configuration)\\NUnit301.dll">
+    <Exec IgnoreExitCode="True" Command="..\\packages\\NUnit.Console.3.0.1\\tools\\nunit3-console.exe bin\\Debug\\NUnit301.dll">
       <Output TaskParameter="ExitCode" ItemName="exitCode" />
     </Exec>
     <Error Text="Error while running tests" Condition="@(exitCode) &lt; 0" />
