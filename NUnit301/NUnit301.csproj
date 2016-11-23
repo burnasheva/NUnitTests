@@ -57,7 +57,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="RunTests">
-    <Exec IgnoreExitCode="True" Command="..\packages\NUnit.Console.3.0.1\tools\nunit3-console.exe $(TestAssembly)">
+    <Exec IgnoreExitCode="True" Command="..\\packages\\NUnit.Console.3.0.1\\tools\\nunit3-console.exe %(TestAssembly)">
       <Output TaskParameter="ExitCode" ItemName="exitCode" />
     </Exec>
     <Error Text="Error while running tests" Condition="@(exitCode) &lt; 0" />
