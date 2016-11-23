@@ -61,12 +61,4 @@
   <Target Name="BeforeBuild">
   </Target>
   -->
-  
-  <Target Name="NUnit">
-    <Exec IgnoreExitCode="True" Command="..\\packages\\NUnit.Console.3.0.1\\tools\\nunit3-console.exe bin\\Debug\\NUnit301.dll">
-      <Output TaskParameter="ExitCode" ItemName="exitCode" />
-    </Exec>
-    <Error Text="Error while running tests" Condition="@(exitCode) &lt; 0" />
-  </Target>
-
 </Project>
