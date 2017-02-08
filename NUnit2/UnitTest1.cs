@@ -21,7 +21,7 @@ namespace NUnit2
         {
             Console.WriteLine("http://user:123456@jetbrains.com");
             Console.WriteLine("123456");
-            Assert.That(1 + 3, Is.EqualTo(5), "123456 password");
+            Assert.That(1 + 3, Is.EqualTo(4), "123456 password");
         }
 
 
@@ -29,14 +29,14 @@ namespace NUnit2
         [Category("calc")]
         public void TestMinus()
         {
-            Assert.That(1 - 3, Is.EqualTo(-3), "http://user:123456@jetbrains.com");
+            Assert.That(1 - 3, Is.EqualTo(-2), "http://user:123456@jetbrains.com");
         }
 
         [Test]
         [Category("calc")]
         public void TestMultiply()
         {
-            Assert.That(1 * 3, Is.EqualTo(2), "123456");
+            Assert.That(1 * 3, Is.EqualTo(3), "123456");
         }
 
         [Test]
