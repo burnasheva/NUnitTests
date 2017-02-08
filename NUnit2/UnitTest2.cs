@@ -10,7 +10,7 @@ namespace NUnit2
         [SetUp]
         public void DoingSmth()
         {
-            throw new Exception("Exceptioinin OneTimeSetUp method");
+            //throw new Exception("Exceptioinin OneTimeSetUp method");
         }
 
         [Test]
