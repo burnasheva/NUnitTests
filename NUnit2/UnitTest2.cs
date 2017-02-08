@@ -17,7 +17,7 @@ namespace NUnit2
         [Category("calc"), Category("smth")]
         public void TestPlus()
         {
-            Assert.That(1 + 3, Is.EqualTo(3));
+            Assert.That(1 + 3, Is.EqualTo(4));
         }
 
         [Test]
