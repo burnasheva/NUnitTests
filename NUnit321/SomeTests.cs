@@ -14,7 +14,7 @@ namespace NUnit321
         {
             Console.WriteLine("http://user:123456@jetbrains.com");
             Console.WriteLine("123456");
-            Assert.That(1 + 3, Is.EqualTo(5), "123456 password");
+            Assert.That(1 + 3, Is.EqualTo(4), "123456 password");
         }
 
 
@@ -22,7 +22,7 @@ namespace NUnit321
         [Category("calc")]
         public void TestMinus()
         {
-            Assert.That(1 - 3, Is.EqualTo(-3), "http://user:123456@jetbrains.com");
+            Assert.That(1 - 3, Is.EqualTo(-2), "http://user:123456@jetbrains.com");
         }
 
         [Test]
