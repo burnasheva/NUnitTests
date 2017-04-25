@@ -1,9 +1,8 @@
-﻿using System;
+﻿using NUnit.Framework;
+using System;
 
 namespace NUnit321
 {
-    using NUnit.Framework;
-
     [TestFixture]
     public class SomeTests
     {
